@@ -43,8 +43,6 @@ private:
      * Wayland: Driver
      */
     const WallpaperEngine::Render::Drivers::WaylandOpenGLDriver& m_waylandDriver;
-
-    glm::dvec2 m_pos = {};
 };
 } // namespace WallpaperEngine::Input::Drivers
 
