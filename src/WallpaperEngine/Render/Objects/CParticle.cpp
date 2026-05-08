@@ -559,9 +559,8 @@ EmitterFunc CParticle::createSphereEmitter (const ParticleEmitter& emitter) {
     }
 
     bool limitOnePerFrame = (emitter.flags & 2) != 0;
-    std::string particleName = m_particle.name;
 
-    return [this, emitter, transformedEmitterOrigin, controlPointIndex, rate, lifetime, limitOnePerFrame, particleName,
+    return [this, emitter, transformedEmitterOrigin, controlPointIndex, rate, lifetime, limitOnePerFrame,
 	    emissionTimer = 0.0f,
 	    remaining
 	    = emitter.instantaneous] (std::vector<ParticleInstance>& particles, uint32_t& count, float dt) mutable {
